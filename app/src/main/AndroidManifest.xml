@@ -13,13 +13,13 @@
         android:theme="@style/Theme.ActivityLifecycleApp"
         tools:targetApi="31">
         <activity
-            android:name=".JavaActivity"
+            android:name=".views.JavaActivity"
             android:exported="false" />
         <activity
-            android:name=".KotlinActivity"
+            android:name=".views.KotlinActivity"
             android:exported="false" />
         <activity
-            android:name=".ComposeActivity"
+            android:name=".views.ComposeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

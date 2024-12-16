@@ -1,4 +1,4 @@
-package com.jonathanreategui.activitylifecycleapp;
+package com.jonathanreategui.activitylifecycleapp.views;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +8,8 @@ import androidx.activity.EdgeToEdge;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.jonathanreategui.activitylifecycleapp.R;
 
 public class JavaActivity extends ComponentActivity {
 

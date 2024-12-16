@@ -15,6 +15,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jonathanreategui.activitylifecycleapp.ui.theme.ActivityLifecycleAppTheme
+import com.jonathanreategui.activitylifecycleapp.views.ComposeActivity
+import com.jonathanreategui.activitylifecycleapp.views.JavaActivity
+import com.jonathanreategui.activitylifecycleapp.views.KotlinActivity
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
