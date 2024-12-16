@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ActivityLifecycleApp"
         tools:targetApi="31">
         <activity
+            android:name=".JavaActivity"
+            android:exported="false" />
+        <activity
             android:name=".ComposeActivity"
             android:exported="false"
             android:label="@string/title_activity_compose"

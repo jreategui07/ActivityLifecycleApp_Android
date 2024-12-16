@@ -25,6 +25,10 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     MainScreen(
                         modifier = Modifier.padding(innerPadding),
+                        onJavaButtonClick = {
+                            val intent = Intent(this, JavaActivity::class.java)
+                            startActivity(intent)
+                        },
                         onXmlButtonClick = {
                             val intent = Intent(this, XMLActivity::class.java)
                             startActivity(intent)
@@ -43,6 +47,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainScreen(
     modifier: Modifier = Modifier,
+    onJavaButtonClick: () -> Unit,
     onXmlButtonClick: () -> Unit,
     onComposeButtonClick: () -> Unit
 ) {
@@ -51,8 +56,11 @@ fun MainScreen(
         contentAlignment = Alignment.Center
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Button(onClick = onJavaButtonClick, modifier = Modifier.padding(8.dp)) {
+                Text(text = "Go to Java + XML Activity")
+            }
             Button(onClick = onXmlButtonClick, modifier = Modifier.padding(8.dp)) {
-                Text(text = "Go to XML Activity")
+                Text(text = "Go to Kotlin + XML Activity")
             }
             Button(onClick = onComposeButtonClick, modifier = Modifier.padding(8.dp)) {
                 Text(text = "Go to Compose Activity")
@@ -66,6 +74,7 @@ fun MainScreen(
 fun MainScreenPreview() {
     ActivityLifecycleAppTheme {
         MainScreen(
+            onJavaButtonClick = {},
             onXmlButtonClick = {},
             onComposeButtonClick = {}
         )
