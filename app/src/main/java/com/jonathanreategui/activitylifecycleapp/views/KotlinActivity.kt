@@ -3,6 +3,7 @@ package com.jonathanreategui.activitylifecycleapp.views
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
+import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.jonathanreategui.activitylifecycleapp.R
@@ -13,8 +14,9 @@ class KotlinActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kotlin)
         Log.d(TAG, "#1: onCreate called")
+        this.enableEdgeToEdge()
+        setContentView(R.layout.activity_kotlin)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
