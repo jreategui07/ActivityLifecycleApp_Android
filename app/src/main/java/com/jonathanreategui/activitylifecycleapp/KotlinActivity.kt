@@ -12,7 +12,7 @@ class KotlinActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_xml)
+        setContentView(R.layout.activity_kotlin)
         Log.d(TAG, "#1: onCreate called")
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                             val intent = Intent(this, JavaActivity::class.java)
                             startActivity(intent)
                         },
-                        onXmlButtonClick = {
+                        onKotlinButtonClick = {
                             val intent = Intent(this, KotlinActivity::class.java)
                             startActivity(intent)
                         },
@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
 fun MainScreen(
     modifier: Modifier = Modifier,
     onJavaButtonClick: () -> Unit,
-    onXmlButtonClick: () -> Unit,
+    onKotlinButtonClick: () -> Unit,
     onComposeButtonClick: () -> Unit
 ) {
     Box(
@@ -59,7 +59,7 @@ fun MainScreen(
             Button(onClick = onJavaButtonClick, modifier = Modifier.padding(8.dp)) {
                 Text(text = "Go to Java + XML Activity")
             }
-            Button(onClick = onXmlButtonClick, modifier = Modifier.padding(8.dp)) {
+            Button(onClick = onKotlinButtonClick, modifier = Modifier.padding(8.dp)) {
                 Text(text = "Go to Kotlin + XML Activity")
             }
             Button(onClick = onComposeButtonClick, modifier = Modifier.padding(8.dp)) {
@@ -75,7 +75,7 @@ fun MainScreenPreview() {
     ActivityLifecycleAppTheme {
         MainScreen(
             onJavaButtonClick = {},
-            onXmlButtonClick = {},
+            onKotlinButtonClick = {},
             onComposeButtonClick = {}
         )
     }
