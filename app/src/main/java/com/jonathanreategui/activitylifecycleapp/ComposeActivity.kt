@@ -21,9 +21,12 @@ import androidx.compose.ui.unit.sp
 import com.jonathanreategui.activitylifecycleapp.ui.theme.ActivityLifecycleAppTheme
 
 class ComposeActivity : ComponentActivity() {
+
+    private val TAG: String = "Lifecycle-Compose"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("Compose", "#1: onCreate called")
+        Log.d(TAG, "#1: onCreate called")
         enableEdgeToEdge()
         setContent {
             ActivityLifecycleAppTheme {
@@ -38,32 +41,32 @@ class ComposeActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.d("Compose", "#2: onStart called")
+        Log.d(TAG, "#2: onStart called")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("Compose", "#3: onResume called")
+        Log.d(TAG, "#3: onResume called")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("Compose", "#4: onPause called")
+        Log.d(TAG, "#4: onPause called")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("Compose", "#5: onStop called")
+        Log.d(TAG, "#5: onStop called")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.d("Compose", "#6: onRestart called")
+        Log.d(TAG, "#6: onRestart called")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("Compose", "#7: onDestroy called")
+        Log.d(TAG, "#7: onDestroy called")
     }
 }
 

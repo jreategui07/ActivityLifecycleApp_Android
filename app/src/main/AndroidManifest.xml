@@ -16,18 +16,14 @@
             android:name=".JavaActivity"
             android:exported="false" />
         <activity
-            android:name=".ComposeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_compose"
-            android:theme="@style/Theme.ActivityLifecycleApp" />
+            android:name=".KotlinActivity"
+            android:exported="false" />
         <activity
-            android:name=".XMLActivity"
+            android:name=".ComposeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.ActivityLifecycleApp">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

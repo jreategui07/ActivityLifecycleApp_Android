@@ -18,7 +18,7 @@ public class JavaActivity extends ComponentActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "#1: onCreate called");
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_xmlactivity);
+        setContentView(R.layout.activity_xml);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

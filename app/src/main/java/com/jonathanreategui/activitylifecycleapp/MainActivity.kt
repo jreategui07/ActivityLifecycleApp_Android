@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                             startActivity(intent)
                         },
                         onXmlButtonClick = {
-                            val intent = Intent(this, XMLActivity::class.java)
+                            val intent = Intent(this, KotlinActivity::class.java)
                             startActivity(intent)
                         },
                         onComposeButtonClick = {
